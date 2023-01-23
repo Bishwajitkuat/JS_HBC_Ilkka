@@ -2,10 +2,9 @@
 
 // if else statements
 
-const [, , suite = "?"] = process.argv;
-
+const [, , suite_imput = "?"] = process.argv;
+const suite = suite_imput.toLowerCase();
 let suiteSymbol = "?";
-
 if (suite === "hearts") {
   suiteSymbol = "\u2665";
 } else if (suite === "diamons") {
