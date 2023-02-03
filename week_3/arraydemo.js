@@ -57,3 +57,19 @@ for (let item of numbers) {
   multi *= item;
 }
 console.log(`${numbers.join(" x ")} = ${multi}`);
+
+function findTheNumberOfCommonFriends(listA, listB) {
+  // return listA.filter((name) => listB.includes(name)).length;
+  let found = 0;
+  for (const name of listA) {
+    if (listB.includes(name)) {
+      found += 1;
+    }
+  }
+  return found;
+}
+
+const a_list = ["a", "b", "c"];
+const b_list = ["b", "c"];
+
+console.log(findTheNumberOfCommonFriends(a_list, b_list));
