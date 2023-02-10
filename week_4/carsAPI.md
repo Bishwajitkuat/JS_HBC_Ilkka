@@ -20,7 +20,7 @@ returns the names of all models in storage as an arry of string. The name is add
 - rturns array of models
 - returns an empty array, if no models found.
 
-## **getCar(key, value)**
+## **getCars(key, value)**
 
 get all cars objects that matches the given key-value pair.
 

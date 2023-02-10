@@ -98,6 +98,10 @@ Array begins with [ and ends with ]. Values is the array are separated by a comm
   {
     "firstName": "Mary",
     "children": [{ "firstName": "Jesse", "age": 15 }]
+  },
+  {
+    "firstname": "Jesse",
+    "children": []
   }
 ]
 ```

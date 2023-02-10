@@ -32,13 +32,11 @@ function getAllModels() {
   }
   return models;
 }
-function getCar(key, value) {
+function getCars(key, value) {
   let filtered_car = [];
   for (const car of cars) {
-    for (const [k, v] of Object.entries(car)) {
-      if (k === key && v === value) {
-        filtered_car.push(car);
-      }
+    if (car[key] === value) {
+      filtered_car.push(car);
     }
   }
   return filtered_car;
@@ -46,4 +44,4 @@ function getCar(key, value) {
 
 // exporting module
 
-module.exports = { getWithLicence, getWithModel, getAllModels, getCar };
+module.exports = { getWithLicence, getWithModel, getAllModels, getCars };

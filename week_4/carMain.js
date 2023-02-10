@@ -4,16 +4,24 @@ const {
   getWithLicence,
   getWithModel,
   getAllModels,
-  getCar,
+  getCars,
 } = require("./carStorage");
 
-console.log(getWithLicence("ABC-1"));
-console.log(getWithModel("Fast GT"));
+const myCar = getWithLicence("A-1");
+if (myCar) {
+  console.log(`My car is ${myCar.model}. The licence is ${myCar.licence}`);
+} else {
+  console.log("Car was not found");
+}
 
-getWithModel("Fast GT").forEach((object) => {
+const fastGts = getWithModel("Fast GT");
+fastGts.forEach((object) => {
   console.log(object.model, object.licence);
 });
 
-console.log(getAllModels());
+console.log(`\nAll available modesl:\n\t${getAllModels().join("\n\t")}`);
 
-console.log(getCar("model", "Fast GT"));
+getCars("model", "Fast GT").forEach((car) => {
+  console.log("Model:", car.model);
+  console.log("Licence:", car.licence);
+});
