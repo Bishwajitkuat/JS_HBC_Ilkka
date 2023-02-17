@@ -59,7 +59,7 @@ function getAllBooks(substringInName) {
   let found_book_author = [];
   for (const person of library) {
     for (const book of person.books) {
-      if (book.name === substringInName) {
+      if (book.name.includes(substringInName)) {
         found_book_author.push({
           firstname: person.firstname,
           lastname: person.lastname,

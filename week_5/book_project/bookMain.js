@@ -32,7 +32,7 @@ console.log(getAllBooks("ABC"));
 
 // all book with "Programming JavaScript" name
 console.log("######## all book with Programming JavaScript name");
-console.log(getAllBooks("Programming JavaScript"));
+console.log(getAllBooks("rog"));
 // book does not exist
 console.log("######## book does not exist ############");
 console.log(getAllBooks("nobook"));
